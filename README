@@ -1,0 +1,34 @@
+Calin Teodor-Georgian
+324CA
+
+				Tema 1 IOCLA - printf
+
+	In acest fisier voi prezenta ideea acestui algoritm pentru implementarea
+	functiei printf.
+
+	Pentru a parcurge stringul dat ca parametru functiei de printare,
+se folosesc doi pointeri de tip char ('token' si 'i'), asezati la inceputul
+stringului, unul din ei ('i') deplasandu-se caracter cu caracter. In momentul 
+in care pe pozitia 'i' in string se gaseste caracterul '%', se vor afisa toate
+caracterele de pe pozitiile de la 'token' la 'i'. Apoi, in fuctie de caracterul
+de dupa '%', se printeaza lucrul cerut. Dupa printarea argumentului respectiv,
+amandoi pointerii, 'token' si 'i' se asaza imediat dupa caracterul de dupa '%'.
+Daca 'i' ajunge la caracterul nul, se printeaza ce a mai ramas de la pozitia
+'token' la 'i', si apoi se returneaza numarul de caractere printate in total.
+
+	Cazurile:
+
+- '%' - Se printeaza caracterul '%', si se trece mai departe;
+- 'c' - Se "extrage" urmatorul parametru, si se scrie direct. Fiind de tip char,
+		nu necesita niciun fel de transformare.
+- 's' - Se "extrage" urmatorul parametru, care reprezinta un pointer de tip
+		char, si se afiseaza toate caracterele.
+- 'd', 'u', 'x' - Aceste 3 cazuri sunt asemanatoare. Se extrage urmatorul
+				  parametru, interpretat ca numar intreg. Apoi, cifrele
+				  numarului sunt puse pe rand intr-un string(in ordine inversa),
+				  se inverseaza stringul, si se afiseaza.
+				  Exista o exceptie pentru cazul 'd'. In cazul in care numarul
+				  este negativ, se va tine acest lucru minte intr-o variabila,
+				  pentru a putea pune caracterul '-'. Pentru cazul 'x' cifrele 
+				  se vor extrage, in mod evident, folosind restul impartirii
+				  numarului la 16.
