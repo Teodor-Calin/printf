@@ -1,12 +1,6 @@
 Calin Teodor-Georgian
-324CA
 
-				Tema 1 IOCLA - printf
-
-	In acest fisier voi prezenta ideea acestui algoritm pentru implementarea
-	functiei printf.
-
-	Pentru a parcurge stringul dat ca parametru functiei de printare,
+Pentru a parcurge stringul dat ca parametru functiei de printare,
 se folosesc doi pointeri de tip char ('token' si 'i'), asezati la inceputul
 stringului, unul din ei ('i') deplasandu-se caracter cu caracter. In momentul 
 in care pe pozitia 'i' in string se gaseste caracterul '%', se vor afisa toate
